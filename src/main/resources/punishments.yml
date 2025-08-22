@@ -1,0 +1,47 @@
+# remove-violations-after: Через сколько секунд с момента ПОСЛЕДНЕГО флага сбрасывать счетчик нарушений.
+# checks: Список имен проверок, к которым применяется эта группа.
+# commands: Список команд в формате "ПОРОГ:ИНТЕРВАЛ команда"
+#   - "ПОРОГ" - на каком количестве флагов команда сработает в первый раз.
+#   - "ИНТЕРВАЛ" - как часто повторять команду после первого срабатывания. 0 = не повторять.
+#   - "команда" - сама команда. [alert] - специальная команда для вывода оповещения.
+#
+
+Punishments:
+  AutoSwap:
+    remove-violations-after: 300
+    checks:
+      - "AutoSwap"
+    commands:
+      - "1:1 [alert]"
+
+  AuraSprint:
+    remove-violations-after: 300
+    checks:
+      - "AuraSprint"
+    commands:
+      - "1:1 [alert]"
+  AIAim:
+    remove-violations-after: 300
+    checks:
+      - "AI (Aim)"
+    commands:
+      - "1:1 [alert]"
+  ElytraTarget:
+    remove-violations-after: 300
+    checks:
+      - "ElytraTarget"
+    commands:
+      - "1:1 [alert]"
+  Inv:
+    remove-violations-after: 300
+    checks:
+      - "InvMove"
+    commands:
+      - "1:1 [alert]"
+  Move:
+    remove-violations-after: 300
+    checks:
+      - "NoSlow"
+      - "Spider"
+    commands:
+      - "1:1 [alert]"

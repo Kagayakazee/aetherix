@@ -1,0 +1,17 @@
+name: aetherix
+version: '1.0-SNAPSHOT'
+main: xd.kagayakazee.aetherix.Main
+api-version: '1.16'
+authors: [ Kagayakazee ]
+description: zalupa
+commands:
+  aetherix:
+permissions:
+  aetherix.alerts:
+    description: Allows receiving anticheat alerts
+    default: op
+  aetherix.exempt:
+    description: Exempt
+  aetherix.reload:
+    description: Reload
+    default: op
